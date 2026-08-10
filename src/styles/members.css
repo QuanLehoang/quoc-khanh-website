@@ -1,0 +1,492 @@
+/* =========================================================
+   MEMBERS SECTION
+========================================================= */
+
+.members {
+    position: relative;
+    width: min(1180px, calc(100% - 40px));
+    margin: 90px auto 100px;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.members-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.members-kicker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #ffd000;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.members-kicker-line {
+    width: 38px;
+    height: 1px;
+    background: linear-gradient( 90deg, transparent, #ffd000);
+}
+
+.members-kicker-line:last-child {
+    background: linear-gradient( 90deg, #ffd000, transparent);
+}
+
+.members-header h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.members-header h2 span {
+    color: #ffd000;
+}
+
+.members-header p {
+    max-width: 600px;
+    margin: 15px auto 0;
+    color: rgba(255, 255, 255, .55);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.members-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.member {
+    position: relative;
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 35px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: linear-gradient( 135deg, rgba(35, 35, 35, .98), rgba(16, 16, 16, .98));
+    border: 1px solid rgba(255, 208, 0, .17);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .25);
+    isolation: isolate;
+    transition: transform .5s cubic-bezier(.2, .8, .2, 1), border-color .5s ease, box-shadow .5s ease;
+}
+
+
+/* hover card */
+
+.member:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 208, 0, .55);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, .42), 0 0 50px rgba(255, 208, 0, .07);
+}
+
+
+/* =========================================================
+   CARD BACKGROUND LIGHT
+========================================================= */
+
+.member-light {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: -220px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient( circle, rgba(255, 208, 0, .15), transparent 65%);
+    filter: blur(15px);
+    opacity: .7;
+    pointer-events: none;
+    transition: transform .8s ease, opacity .8s ease;
+}
+
+.member:hover .member-light {
+    transform: translateX(-50%) scale(1.5);
+    opacity: 1;
+}
+
+
+/* =========================================================
+   SHINE EFFECT
+========================================================= */
+
+.member-shine {
+    position: absolute;
+    z-index: 5;
+    top: -100%;
+    left: -70%;
+    width: 45%;
+    height: 300%;
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, .12), transparent);
+    transform: rotate(20deg);
+    pointer-events: none;
+    transition: left .9s cubic-bezier(.2, .8, .2, 1);
+}
+
+.member:hover .member-shine {
+    left: 130%;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.member-index {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: rgba(255, 208, 0, .13);
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 900;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.member-image-box {
+    position: relative;
+    flex: 0 0 175px;
+    width: 175px;
+    height: 175px;
+    z-index: 3;
+}
+
+.member-image-ring {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 50%;
+    background: conic-gradient( #ffd000, #fff1a0, #c58d00, #ffd000);
+    box-shadow: 0 0 0 7px rgba(255, 208, 0, .04), 0 15px 50px rgba(255, 208, 0, .15);
+}
+
+.member-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #161616;
+    transition: transform .5s ease, filter .5s ease;
+}
+
+.member:hover .member-image {
+    transform: scale(1.06);
+    filter: brightness(1.08) saturate(1.1);
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.member-status {
+    position: absolute;
+    right: 7px;
+    bottom: 13px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: #35df78;
+    border: 4px solid #151515;
+    box-shadow: 0 0 0 5px rgba(53, 223, 120, .08);
+    animation: memberPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.member-content {
+    position: relative;
+    z-index: 3;
+    flex: 1;
+}
+
+.member-small-title {
+    display: block;
+    margin-bottom: 7px;
+    color: #ffd000;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.member-content h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.member-role {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, .7);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.member-line {
+    width: 65px;
+    height: 2px;
+    margin: 18px 0;
+    background: linear-gradient( 90deg, #ffd000, transparent);
+}
+
+.member-content p {
+    margin: 0;
+    max-width: 310px;
+    color: rgba(255, 255, 255, .52);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.member-actions {
+    display: flex;
+    gap: 9px;
+    margin-top: 22px;
+}
+
+.member-social {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid rgba(255, 208, 0, .18);
+    transition: transform .3s ease, background .3s ease, color .3s ease, border-color .3s ease;
+}
+
+.member-social:hover {
+    transform: translateY(-5px) rotate(-6deg);
+    color: #261500;
+    background: #ffd000;
+    border-color: #ffd000;
+    box-shadow: 0 8px 25px rgba(255, 208, 0, .2);
+}
+
+.member-social span {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.member-arrow {
+    position: absolute;
+    right: 25px;
+    bottom: 22px;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #ffd000;
+    border: 1px solid rgba(255, 208, 0, .2);
+    background: rgba(255, 208, 0, .03);
+    font-size: 20px;
+    transition: transform .4s ease, background .4s ease;
+}
+
+.member:hover .member-arrow {
+    transform: translate(5px, -5px) rotate(5deg);
+    background: rgba(255, 208, 0, .12);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes memberRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes memberRotateReverse {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes memberPulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px rgba(53, 223, 120, .08);
+    }
+    50% {
+        box-shadow: 0 0 0 9px rgba(53, 223, 120, .02);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+    .members-list {
+        grid-template-columns: 1fr;
+    }
+    .member {
+        min-height: 340px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+    .members {
+        width: calc(100% - 28px);
+        margin-top: 60px;
+        margin-bottom: 70px;
+    }
+    .members-header {
+        margin-bottom: 28px;
+    }
+    .members-header h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+    .members-header p {
+        font-size: 13px;
+    }
+    .members-list {
+        gap: 18px;
+    }
+    .member {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 22px 30px;
+        gap: 20px;
+    }
+    .member-image-box {
+        width: 140px;
+        height: 140px;
+        flex-basis: 140px;
+    }
+    .member-content {
+        width: 100%;
+    }
+    .member-content h3 {
+        font-size: 27px;
+    }
+    .member-line {
+        margin: 16px auto;
+    }
+    .member-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .member-actions {
+        justify-content: center;
+    }
+    .member-arrow {
+        right: 17px;
+        bottom: 17px;
+        width: 36px;
+        height: 36px;
+    }
+    .member-index {
+        top: 15px;
+        right: 18px;
+        font-size: 50px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media (max-width: 380px) {
+    .members-header h2 {
+        font-size: 28px;
+    }
+    .member {
+        padding: 30px 17px 27px;
+    }
+    .member-image-box {
+        width: 120px;
+        height: 120px;
+        flex-basis: 120px;
+    }
+    .member-content h3 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .member,
+    .member *,
+    .member::before,
+    .member::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+.member-social svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    transition: transform .3s ease;
+}
+
+.member-social:hover svg {
+    transform: scale(1.12);
+}

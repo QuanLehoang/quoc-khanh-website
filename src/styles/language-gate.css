@@ -1,0 +1,266 @@
+/* =========================================
+   LANGUAGE GATE
+========================================= */
+
+.language-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(circle at top, #d91d2a 0%, #820015 38%, #140000 100%);
+}
+
+
+/* =========================================
+   Background
+========================================= */
+
+.language-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 215, 0, .18), transparent 70%);
+    animation: glow 6s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: .55;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   Card
+========================================= */
+
+.language-content {
+    position: relative;
+    z-index: 2;
+    width: min(92%, 900px);
+    padding: 55px 45px;
+    border-radius: 30px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+}
+
+
+/* =========================================
+   Logo
+========================================= */
+
+.language-logo {
+    width: 95px;
+    height: 95px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+    color: #FFD700;
+    background: linear-gradient(145deg, #da251d, #920000);
+    box-shadow: 0 0 30px rgba(255, 215, 0, .25);
+}
+
+
+/* =========================================
+   Typing
+========================================= */
+
+.typing-title {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.typing-line {
+    min-height: 48px;
+    color: #fff;
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+    font-weight: 900;
+    letter-spacing: .5px;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.cursor {
+    color: #FFD700;
+    animation: blink .8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.language-description {
+    margin-top: 18px;
+    color: #dddddd;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   Buttons
+========================================= */
+
+.language-buttons {
+    margin-top: 42px;
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+}
+
+.language-card {
+    flex: 1;
+    max-width: 360px;
+    padding: 22px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .12);
+    transition: .35s;
+    color: #fff;
+}
+
+.language-card:hover {
+    transform: translateY(-6px);
+    border-color: #FFD54A;
+    background: rgba(255, 255, 255, .11);
+    box-shadow: 0 14px 35px rgba(255, 215, 0, .18);
+}
+
+.language-card.active {
+    border: 2px solid #FFD700;
+    background: rgba(255, 215, 0, .08);
+}
+
+.language-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.language-flag {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 0 12px rgba(255, 255, 255, .25);
+}
+
+.language-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.language-info {
+    text-align: left;
+}
+
+.language-info h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.language-info p {
+    margin-top: 5px;
+    color: #d9d9d9;
+    font-size: 14px;
+}
+
+.language-check {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #FFD700;
+    color: #7b0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   Footer
+========================================= */
+
+.language-footer {
+    margin-top: 35px;
+    color: #cccccc;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media(max-width:900px) {
+    .language-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .language-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .language-content {
+        width: 92%;
+        padding: 36px 22px;
+    }
+    .language-logo {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+    .typing-line {
+        white-space: normal;
+        min-height: auto;
+        font-size: 1.6rem;
+    }
+    .language-description {
+        font-size: 15px;
+    }
+    .language-card {
+        padding: 18px;
+    }
+    .language-flag {
+        width: 46px;
+        height: 46px;
+    }
+    .language-info h3 {
+        font-size: 18px;
+    }
+    .language-info p {
+        font-size: 13px;
+    }
+}

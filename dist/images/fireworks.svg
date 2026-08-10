@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs><radialGradient id="night" cx="50%" cy="15%" r="85%"><stop stop-color="#6d1f2c"/><stop offset=".6" stop-color="#181818"/><stop offset="1" stop-color="#070707"/></radialGradient></defs>
+  <rect width="900" height="620" fill="url(#night)"/>
+  <g stroke="#FFCD00" stroke-width="6" stroke-linecap="round"><path d="M216 128v-78"/><path d="M216 128l55-55"/><path d="M216 128h78"/><path d="M216 128l55 55"/><path d="M216 128v78"/><path d="M216 128l-55 55"/><path d="M216 128h-78"/><path d="M216 128l-55-55"/></g>
+  <g stroke="#ff6b5f" stroke-width="5" stroke-linecap="round"><path d="M670 180v-92"/><path d="M670 180l65-65"/><path d="M670 180h92"/><path d="M670 180l65 65"/><path d="M670 180v92"/><path d="M670 180l-65 65"/><path d="M670 180h-92"/><path d="M670 180l-65-65"/></g>
+  <g stroke="#fff8f5" stroke-width="4" stroke-linecap="round" opacity=".8"><path d="M455 118v-55"/><path d="M455 118l39-39"/><path d="M455 118h55"/><path d="M455 118l39 39"/><path d="M455 118v55"/><path d="M455 118l-39 39"/><path d="M455 118h-55"/><path d="M455 118l-39-39"/></g>
+  <path d="M0 430c130-36 245-22 345 42s221 65 363 4c76-33 140-36 192-10v154H0z" fill="#2f5639"/>
+  <path d="M320 384h260v114H320z" fill="#9c1915"/><path d="M360 327h180v68H360z" fill="#d9caa2"/>
+</svg>
