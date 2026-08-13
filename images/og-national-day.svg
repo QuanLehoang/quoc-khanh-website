@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="30%" cy="20%" r="80%">
+      <stop offset="0" stop-color="#ff705d"/>
+      <stop offset=".45" stop-color="#da251d"/>
+      <stop offset="1" stop-color="#8f1010"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1000" cy="80" r="180" fill="#ffcd00" opacity=".18"/>
+  <path fill="#FFCD00" d="m600 126 50 150h158L680 369l49 151-129-93-129 93 49-151-128-93h158z"/>
+  <text x="80" y="505" fill="#fff8f5" font-family="Montserrat, Arial" font-size="82" font-weight="800">QUỐC KHÁNH 2/9</text>
+  <text x="84" y="560" fill="#ffeb99" font-family="Arial" font-size="32">Vietnam National Day 2026</text>
+</svg>
